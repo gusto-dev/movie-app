@@ -1,9 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="wrap">
+    <AppHeader></AppHeader>
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
-<style></style>
+<script>
+import AppHeader from '@/components/common/AppHeader.vue'
+
+export default {
+  components: {
+    AppHeader
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.wrap {
+  position: relative;
+  main {
+    padding: 40px 0;
+  }
+}
+</style>
